@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkg4atema2chi;
 
-/**
- *
- * @author chima
- */
 public class dlgAproximaciones extends javax.swing.JDialog {
 
     /**
@@ -35,6 +27,8 @@ public class dlgAproximaciones extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnAproximaciones = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -53,30 +47,42 @@ public class dlgAproximaciones extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tablaAproximaciones);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(50, 97, 452, 260);
+        jScrollPane1.setBounds(30, 180, 470, 180);
         getContentPane().add(txtValorInicial);
-        txtValorInicial.setBounds(200, 50, 60, 20);
+        txtValorInicial.setBounds(30, 90, 70, 20);
         getContentPane().add(txtError);
-        txtError.setBounds(280, 50, 60, 20);
+        txtError.setBounds(120, 90, 60, 20);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Valor Inicial");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(190, 30, 80, 15);
+        jLabel2.setBounds(30, 70, 70, 15);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Error");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(300, 30, 30, 15);
+        jLabel3.setBounds(120, 70, 60, 15);
 
-        btnAproximaciones.setText("Aprox");
+        btnAproximaciones.setBackground(new java.awt.Color(0, 204, 0));
+        btnAproximaciones.setText("Calcular");
         btnAproximaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAproximacionesActionPerformed(evt);
             }
         });
         getContentPane().add(btnAproximaciones);
-        btnAproximaciones.setBounds(50, 50, 110, 23);
+        btnAproximaciones.setBounds(30, 130, 100, 23);
+
+        jPanel1.setBackground(new java.awt.Color(0, 51, 102));
+
+        jLabel1.setFont(new java.awt.Font("Abel", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Metodo de Aproximaciones");
+        jPanel1.add(jLabel1);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 540, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,8 +141,10 @@ public class dlgAproximaciones extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAproximaciones;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tablaAproximaciones;
     private javax.swing.JTextField txtError;

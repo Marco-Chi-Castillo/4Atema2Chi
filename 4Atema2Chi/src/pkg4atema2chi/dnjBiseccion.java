@@ -28,6 +28,8 @@ public class dnjBiseccion extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -46,22 +48,24 @@ public class dnjBiseccion extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tablaBiseccion);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 70, 460, 270);
+        jScrollPane1.setBounds(30, 190, 460, 190);
 
-        btnBiseccion.setText("Biseccion");
+        btnBiseccion.setBackground(new java.awt.Color(0, 204, 0));
+        btnBiseccion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnBiseccion.setText("Calcular");
         btnBiseccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBiseccionActionPerformed(evt);
             }
         });
         getContentPane().add(btnBiseccion);
-        btnBiseccion.setBounds(20, 30, 100, 23);
+        btnBiseccion.setBounds(30, 140, 100, 23);
         getContentPane().add(txtXi);
-        txtXi.setBounds(130, 30, 40, 20);
+        txtXi.setBounds(30, 100, 40, 20);
         getContentPane().add(txtXs);
-        txtXs.setBounds(180, 30, 40, 20);
+        txtXs.setBounds(80, 100, 40, 20);
         getContentPane().add(txtI);
-        txtI.setBounds(230, 30, 40, 20);
+        txtI.setBounds(130, 100, 40, 20);
 
         txtError.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,31 +73,42 @@ public class dnjBiseccion extends javax.swing.JDialog {
             }
         });
         getContentPane().add(txtError);
-        txtError.setBounds(280, 30, 40, 20);
+        txtError.setBounds(180, 100, 40, 20);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("XI");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(130, 10, 40, 20);
+        jLabel1.setBounds(30, 80, 40, 20);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("XS");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(180, 10, 40, 20);
+        jLabel2.setBounds(80, 80, 40, 20);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Error");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(280, 10, 40, 20);
+        jLabel3.setBounds(180, 80, 40, 20);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("I");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(230, 10, 40, 20);
+        jLabel4.setBounds(130, 80, 40, 20);
+
+        jPanel1.setBackground(new java.awt.Color(0, 51, 102));
+
+        jLabel5.setFont(new java.awt.Font("Abel", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Metodo de Biseccion");
+        jPanel1.add(jLabel5);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 520, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,6 +177,8 @@ public class dnjBiseccion extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tablaBiseccion;
     private javax.swing.JTextField txtError;

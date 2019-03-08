@@ -7,18 +7,20 @@ public class ctrlAproximaciones {
    private double valorInicial;
    private double error;
    
-    public ctrlAproximaciones(double valorInicial, double error) {
+   public ctrlAproximaciones(double valorInicial, double error){
         this.valorInicial = valorInicial;
         this.error = error;
-    }
+   }
    
     /**
      * @param x es el valor inicial
      * @return la evaluacion a trabajar.
      */
+   
     public double getEvaluacion(double x){
        return Math.pow(Math.E, -(x));
    }
+    
     /**
      * @param xInicial valor inicial
      * @return returna el error en positivo
@@ -55,6 +57,7 @@ public class ctrlAproximaciones {
         }
         return listaSoluciones;
     }
+    
     /**
      * @return el modelo de la tabla de aproximaciones.
      */
@@ -66,11 +69,4 @@ public class ctrlAproximaciones {
             modelo = new tablaAproximaciones(lista);
        return modelo;
    }
-    
-   
-
-    
-    
-    
-   
 }
