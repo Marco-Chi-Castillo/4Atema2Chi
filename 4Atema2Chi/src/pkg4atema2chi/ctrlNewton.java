@@ -14,10 +14,10 @@ public class ctrlNewton {
     
     
     public ctrlNewton(double valorInicial, double error ){
-this.valorInicial = valorInicial;
-this.error = error;
-
-}
+        this.valorInicial = valorInicial;
+        this.error = error;
+    }
+    
     public double getFunOriginal(double x){
 
     return Math.pow(Math.E, -(x) )- x;
