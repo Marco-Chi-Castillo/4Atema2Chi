@@ -91,6 +91,12 @@ public class frmPrincipal extends javax.swing.JFrame {
        dlgAprox.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    
+     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+       dlgSecante dlgSecan = new dlgSecante(this, true);
+       dlgSecan.setSize(600,400);
+       dlgSecan.setVisible(true);
+    }   
     /**
      * @param args the command line arguments
      */
