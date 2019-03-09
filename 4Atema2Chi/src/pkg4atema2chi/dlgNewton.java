@@ -36,7 +36,7 @@ public class dlgNewton extends javax.swing.JDialog {
         txtValor = new javax.swing.JTextField();
         txtError = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaNewton = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -53,7 +53,7 @@ public class dlgNewton extends javax.swing.JDialog {
 
         jLabel3.setText("Error");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaNewton.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -64,7 +64,7 @@ public class dlgNewton extends javax.swing.JDialog {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaNewton);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,7 +126,9 @@ public class dlgNewton extends javax.swing.JDialog {
         double valorI = Double.parseDouble(this.txtValor.getText().trim());
         double Error = Double.parseDouble(this.txtError.getText().trim());
         
-        
+        ctrlNewton ctrl = new ctrlNewton(valorI, Error);
+        tablaNewton tabla = ctrl.getTablaNewt();
+        this.tablaNewton.setModel(tabla);
     }//GEN-LAST:event_btnNewtonActionPerformed
 
     /**
@@ -177,7 +179,7 @@ public class dlgNewton extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaNewton;
     private javax.swing.JTextField txtError;
     private javax.swing.JTextField txtI;
     private javax.swing.JTextField txtValor;
