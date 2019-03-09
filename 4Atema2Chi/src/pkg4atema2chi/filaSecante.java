@@ -37,6 +37,7 @@ public class filaSecante {
     public void setErro(double erro) {
         this.erro = erro;
     }
+<<<<<<< HEAD
     
     public int getI() {
         return i;
@@ -70,6 +71,39 @@ public class filaSecante {
         return erro;
     }
        
+=======
+>>>>>>> master
     
+    public int getI() {
+        return i;
+    }
+
+    public double getXi1() {
+        return xi1;
+    }
+
+    public double getXi() {
+        return xi;
+    }
+
+    public double getFxi1() {
+        return fxi1;
+    }
+
+    public double getFxi() {
+        return fxi;
+    }
+
+    public double getFormula1() {
+        return formula1;
+    }
+
+    public double getFormula2() {
+        return formula2;
+    }
+
+    public double getErro() {
+        return erro;
+    }
 }
 

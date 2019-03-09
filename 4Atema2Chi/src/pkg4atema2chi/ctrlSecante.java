@@ -13,7 +13,7 @@ public class ctrlSecante {
         this.xi1=Xi1;
         this.error=error;
         this.fxi1=Fxi1;
-        this.fxi=Fxi;
+        this.fxi=Fxi; 
         this.formula1 = formula;
     }
 
