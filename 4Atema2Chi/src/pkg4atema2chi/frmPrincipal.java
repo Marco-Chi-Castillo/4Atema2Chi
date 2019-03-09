@@ -34,6 +34,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        ItemSecante = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -70,6 +71,14 @@ public class frmPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem3);
 
+        ItemSecante.setText("Secante");
+        ItemSecante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemSecanteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(ItemSecante);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Edit");
@@ -96,26 +105,21 @@ public class frmPrincipal extends javax.swing.JFrame {
        dlgAprox.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-<<<<<<< HEAD
+
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
 
-dlgNewton dlgNew = new dlgNewton(this, true);
+       dlgNewton dlgNew = new dlgNewton(this, true);
        dlgNew.setSize(600,400);
        dlgNew.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-=======
-    
-     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
-       dlgSecante dlgSecan = new dlgSecante(this, true);
-       dlgSecan.setSize(600,400);
-       dlgSecan.setVisible(true);
-    }   
->>>>>>> origin/tablaMetodoSecante
-    /**
-     * @param args the command line arguments
-     */
+    private void ItemSecanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemSecanteActionPerformed
+       dlgSecante dlgSec = new dlgSecante(this, true);
+       dlgSec.setSize(600,400);
+       dlgSec.setVisible(true);
+    }//GEN-LAST:event_ItemSecanteActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -149,6 +153,7 @@ dlgNewton dlgNew = new dlgNewton(this, true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem ItemSecante;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

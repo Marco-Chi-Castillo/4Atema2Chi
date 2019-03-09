@@ -3,17 +3,12 @@ package pkg4atema2chi;
 import java.util.ArrayList;
 
 public class ctrlSecante {
-    private int interaciones;
-    private double xi,xi1,fxi,fxi1,error,formula1;
+    private double xi,xi1,error;
     
-    public ctrlSecante(int i,double Xi,double Xi1,double error,double Fxi1,double Fxi,double formula){
-        this.interaciones = i;
+    public ctrlSecante(double Xi,double Xi1,double error){
         this.xi=Xi;
         this.xi1=Xi1;
         this.error=error;
-        this.fxi1=Fxi1;
-        this.fxi=Fxi;
-        this.formula1 = formula;
     }
     
     /**
@@ -48,8 +43,6 @@ public class ctrlSecante {
     public ArrayList<filaSecante> Secante(){
         int i=1;
         double errorcalculado=1;
-        double error; 
-        double f1,f2;
         ArrayList<filaSecante> listaSoluciones = new ArrayList<>();
         
         while(errorcalculado>this.error){
@@ -65,11 +58,24 @@ public class ctrlSecante {
          fila.setFormula2(this.getFormulaXi1(this.xi, this.xi1));
          fila.setErro(this.getError(this.xi, this.xi1));
          
+         listaSoluciones.add(fila);
+         
          this.xi1 = fila.getXi();
          this.xi = fila.getFormula2();
+         
+         errorcalculado = fila.getErro();
         }
         
       return listaSoluciones;  
     }
+    
+    public tablaSecante getTablaSecante(){
+    tablaSecante modelo = null;
+    ArrayList<filaSecante> lista = this.Secante();
+    
+    if(lista != null)
+        modelo = new tablaSecante(lista);
+    return modelo;
+   }
     
 }
