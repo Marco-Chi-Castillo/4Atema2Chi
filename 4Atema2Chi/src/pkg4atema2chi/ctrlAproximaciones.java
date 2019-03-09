@@ -51,7 +51,6 @@ public class ctrlAproximaciones {
             listaSoluciones.add(fila);
            
             this.valorInicial = fila.getGxi();
-            
             errorCalculado = fila.getError();
             i++;
         }

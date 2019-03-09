@@ -177,11 +177,11 @@ public class dlgSecante2 extends javax.swing.JDialog {
         double xi = Double.parseDouble(this.XI.getText().trim());
         double error = Double.parseDouble(this.Error.getText().trim());
         
-         
-        ctrlSecante secante = new ctrlSecante(xi1,xi,i,error);
-        ctrlSecante secante = new ctrlSecante(i,xi,xi1,error);
-        tablaSecante tabla = secante.getTablaSecante();
-        this.tablaSecante.setModel(tabla);
+         //Error no compila
+        //ctrlSecante secante = new ctrlSecante(xi1,xi,i,error);
+        //ctrlSecante secante = new ctrlSecante(i,xi,xi1,error);
+        //tablaSecante tabla = secante.getTablaSecante();
+        //this.tablaSecante.setModel(tabla);
         
         
       
