@@ -5,7 +5,8 @@
  */
 package pkg4atema2chi;
 
-import java.util.ArrayList;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -18,6 +19,9 @@ public class frmPrincipal extends javax.swing.JFrame {
      */
     public frmPrincipal() {
         initComponents();
+        ImageIcon ImageIcon = new ImageIcon(getClass().getResource("libros.png"));
+        Image Image = ImageIcon.getImage();
+        this.setIconImage(Image);
     }
 
     /**
@@ -38,6 +42,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImages(null);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jMenu1.setText("Metodos Ecuaciones No Lineales");
@@ -48,6 +53,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         });
 
         jMenuItem1.setText("Bisección");
+        jMenuItem1.setToolTipText("Metodo de Biseccion");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -56,6 +62,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Aproximaciones");
+        jMenuItem2.setToolTipText("Calcular Metodo de Aproximaciones");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -64,6 +71,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("Newton");
+        jMenuItem3.setToolTipText("Calcular Metodo de Newton");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -72,6 +80,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem3);
 
         ItemSecante.setText("Secante");
+        ItemSecante.setToolTipText("Calcular Metodo Secante");
         ItemSecante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ItemSecanteActionPerformed(evt);
@@ -95,12 +104,14 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
        dnjBiseccion dlg = new dnjBiseccion(this, true);
+       dlg.setTitle("Metodo de Bisección");
        dlg.setSize(600,400);
        dlg.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
        dlgAproximaciones dlgAprox = new dlgAproximaciones(this, true);
+       dlgAprox.setTitle("Metodo de Aproximación");
        dlgAprox.setSize(600,400);
        dlgAprox.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
@@ -109,6 +120,7 @@ public class frmPrincipal extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
 
        dlgNewton dlgNew = new dlgNewton(this, true);
+       dlgNew.setTitle("Metodo de Newton");
        dlgNew.setSize(600,400);
        dlgNew.setVisible(true);
         // TODO add your handling code here:
@@ -116,6 +128,7 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void ItemSecanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemSecanteActionPerformed
        dlgSecante dlgSec = new dlgSecante(this, true);
+       dlgSec.setTitle("Metodo de Secante");
        dlgSec.setSize(600,400);
        dlgSec.setVisible(true);
     }//GEN-LAST:event_ItemSecanteActionPerformed
