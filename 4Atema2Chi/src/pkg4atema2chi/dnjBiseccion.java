@@ -1,6 +1,8 @@
 
 package pkg4atema2chi;
 
+import javax.swing.JOptionPane;
+
 public class dnjBiseccion extends javax.swing.JDialog {
 
     public dnjBiseccion(java.awt.Frame parent, boolean modal) {
@@ -153,14 +155,19 @@ public class dnjBiseccion extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBiseccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBiseccionActionPerformed
-        double xi = Double.parseDouble(this.txtXi.getText().trim());
-        double xs = Double.parseDouble(this.txtXs.getText().trim());
-        int i = Integer.parseInt(this.txtI.getText().trim());
-        double error = Double.parseDouble(this.txtError.getText().trim());
+        try{
+            double xi = Double.parseDouble(this.txtXi.getText().trim());
+            double xs = Double.parseDouble(this.txtXs.getText().trim());
+            int i = Integer.parseInt(this.txtI.getText().trim());
+            double error = Double.parseDouble(this.txtError.getText().trim());
         
-        ctrlBiseccion ctrl = new ctrlBiseccion(xi,xs,error,i);
-        tablaBiseccion tabla = ctrl.getTablaBiseccion();
-        this.tablaBiseccion.setModel(tabla);
+            ctrlBiseccion ctrl = new ctrlBiseccion(xi,xs,error,i);
+            tablaBiseccion tabla = ctrl.getTablaBiseccion();
+            this.tablaBiseccion.setModel(tabla);
+        }catch(Exception e){
+             JOptionPane.showMessageDialog(null, "No se Aceptan Esos datos", "Datos No validos", JOptionPane.WARNING_MESSAGE);
+        }
+       
 
     }//GEN-LAST:event_btnBiseccionActionPerformed
 

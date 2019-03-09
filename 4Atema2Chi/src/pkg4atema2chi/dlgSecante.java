@@ -5,6 +5,8 @@
  */
 package pkg4atema2chi;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author chima
@@ -162,14 +164,18 @@ public class dlgSecante extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        double xi = Double.parseDouble(this.txtXi.getText().trim());
-        double xi1 = Double.parseDouble(this.txtXi1.getText().trim());
-        double error = Double.parseDouble(this.txtError.getText().trim());
+        try{
+            double xi = Double.parseDouble(this.txtXi.getText().trim());
+            double xi1 = Double.parseDouble(this.txtXi1.getText().trim());
+            double error = Double.parseDouble(this.txtError.getText().trim());
         
-        ctrlSecante ctrl = new ctrlSecante(xi, xi1, error);
-        tablaSecante tabla = ctrl.getTablaSecante();
-        this.tablaSecante.setModel(tabla);
+            ctrlSecante ctrl = new ctrlSecante(xi, xi1, error);
+            tablaSecante tabla = ctrl.getTablaSecante();
+            this.tablaSecante.setModel(tabla);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No se Aceptan Esos datos", "Datos No validos", JOptionPane.WARNING_MESSAGE);
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

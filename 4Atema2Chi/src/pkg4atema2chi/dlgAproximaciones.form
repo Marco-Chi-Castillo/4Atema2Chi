@@ -108,6 +108,9 @@
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Ingresa el Valor Inicial"/>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtValorInicialKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtError">
       <Properties>

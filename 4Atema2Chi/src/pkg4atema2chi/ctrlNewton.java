@@ -54,9 +54,6 @@ public class ctrlNewton {
     ArrayList<filaNewton> listaSoluciones = new ArrayList<>();
       while(errorCalculado > this.error){
        
-       //Obtenemos los valores de las funciones
-       
-       //Llamar a las funciones para la tabla
        filaNewton fila = new filaNewton();
    
        fila.setI(i);

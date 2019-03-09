@@ -5,6 +5,8 @@
  */
 package pkg4atema2chi;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Admin
@@ -110,7 +112,7 @@ public class dlgNewton extends javax.swing.JDialog {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,12 +152,17 @@ public class dlgNewton extends javax.swing.JDialog {
 
     private void btnNewtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewtonActionPerformed
         // TODO add your handling code here:
-        double valorI = Double.parseDouble(this.txtValor.getText().trim());
-        double Error = Double.parseDouble(this.txtError.getText().trim());
+        try{
+            double valorI = Double.parseDouble(this.txtValor.getText().trim());
+            double Error = Double.parseDouble(this.txtError.getText().trim());
         
-        ctrlNewton ctrl = new ctrlNewton(valorI, Error);
-        tablaNewton tabla = ctrl.getTablaNewt();
-        this.tablaNewton.setModel(tabla);
+            ctrlNewton ctrl = new ctrlNewton(valorI, Error);
+            tablaNewton tabla = ctrl.getTablaNewt();
+            this.tablaNewton.setModel(tabla);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No se Aceptan Esos datos", "Datos No validos", JOptionPane.WARNING_MESSAGE);
+        }
+        
     }//GEN-LAST:event_btnNewtonActionPerformed
 
     /**

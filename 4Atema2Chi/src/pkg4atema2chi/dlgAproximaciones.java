@@ -1,8 +1,10 @@
 
 package pkg4atema2chi;
 
-public class dlgAproximaciones extends javax.swing.JDialog {
+import javax.swing.JOptionPane;
 
+public class dlgAproximaciones extends javax.swing.JDialog {
+    
     /**
      * Creates new form dlgAproximaciones
      */
@@ -48,6 +50,11 @@ public class dlgAproximaciones extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tablaAproximaciones);
 
         txtValorInicial.setToolTipText("Ingresa el Valor Inicial");
+        txtValorInicial.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtValorInicialKeyTyped(evt);
+            }
+        });
 
         txtError.setToolTipText("Ingresa El Error");
 
@@ -124,14 +131,22 @@ public class dlgAproximaciones extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAproximacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAproximacionesActionPerformed
-
-        double valorI = Double.parseDouble(this.txtValorInicial.getText().trim());
-        double Error = Double.parseDouble(this.txtError.getText().trim());
-    
-        ctrlAproximaciones ctrl = new ctrlAproximaciones(valorI, Error);
-        tablaAproximaciones tabla = ctrl.getTablaAprox();
-        this.tablaAproximaciones.setModel(tabla);
+        try{
+            double valorI = Double.parseDouble(this.txtValorInicial.getText().trim());
+            double Error = Double.parseDouble(this.txtError.getText().trim());
+        
+            ctrlAproximaciones ctrl = new ctrlAproximaciones(valorI, Error);
+            tablaAproximaciones tabla = ctrl.getTablaAprox();
+            this.tablaAproximaciones.setModel(tabla);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No se Aceptan Esos datos", "Datos No validos", JOptionPane.WARNING_MESSAGE);
+        }
+        
     }//GEN-LAST:event_btnAproximacionesActionPerformed
+
+    private void txtValorInicialKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtValorInicialKeyTyped
+        
+    }//GEN-LAST:event_txtValorInicialKeyTyped
 
     /**
      * @param args the command line arguments

@@ -31,13 +31,7 @@ public class ctrlBiseccion {
     * @return la evaluacion.
     */
    public double getEvaluacion(double x){
-     // return Math.pow(x, 3) + 4 * Math.pow(x, 2) - 10;
-     //return Math.tan(x) - x + 1; //Ejercicio 1
-     // return Math.pow(x,2)-0.9*x-1.52; 
-     // return Math.sin(x) - 0.3 * Math.pow(Math.E, x); //ejercicio 2
-     // return Math.tan(x) - 3.5 ;
-     // return Math.pow(x,2) - 0.9*x - 1.52;
-      return x * Math.sin(x) - 0.1;
+      return Math.pow(x, 3) + 4 * Math.pow(x, 2) - 10;
    }
    
    public double getRaiz(double xi, double xs){

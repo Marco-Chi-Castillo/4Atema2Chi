@@ -35,18 +35,16 @@ public class ctrlAproximaciones {
     public ArrayList<filaAproximaciones> aproximacion(){
         int i = 1;
         double errorCalculado = 1;
-        double error;
         ArrayList<filaAproximaciones> listaSoluciones = new ArrayList<>();
         
         while(errorCalculado > this.error){
-            error = this.getError(this.valorInicial);
             
             filaAproximaciones fila = new filaAproximaciones();
-            
+           
             fila.setI(i);
             fila.setXi(this.valorInicial);
             fila.setGxi(this.getEvaluacion(this.valorInicial));
-            fila.setError(error);
+            fila.setError(this.getError(this.valorInicial));
             
             listaSoluciones.add(fila);
            
