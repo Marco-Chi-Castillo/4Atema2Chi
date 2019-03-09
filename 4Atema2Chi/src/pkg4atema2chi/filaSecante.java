@@ -11,7 +11,7 @@ package pkg4atema2chi;
  */
 public class filaSecante {
     private int i;
-    private double xi1,xi,fxi1,fxi,formula1,formula2,erro;
+    private double xi1,xi,fxi1,fxi,formula1,formula2,error;
 
     
     public void setI(int i) {
@@ -42,8 +42,8 @@ public class filaSecante {
         this.formula2 = formula2;
     }
 
-    public void setErro(double erro) {
-        this.erro = erro;
+    public void setError(double error) {
+        this.error = error;
     }
     
     public int getI() {
@@ -74,7 +74,7 @@ public class filaSecante {
         return formula2;
     }
 
-    public double getErro() {
-        return erro;
+    public double getError() {
+        return error;
     }
 }

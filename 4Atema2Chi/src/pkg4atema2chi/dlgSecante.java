@@ -103,26 +103,27 @@ public class dlgSecante extends javax.swing.JDialog {
         txtError.setBounds(190, 100, 60, 20);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Xi - 1");
+        jLabel2.setText("X1-1");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 84, 60, 10);
+        jLabel2.setBounds(30, 80, 60, 20);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("xi");
+        jLabel3.setText("Xi");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(110, 80, 60, 14);
+        jLabel3.setBounds(110, 80, 60, 20);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Error");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(190, 80, 60, 14);
+        jLabel4.setBounds(190, 80, 60, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double xi1 = Double.parseDouble(this.txtXi1.getText().trim());
+
         double xi = Double.parseDouble(this.txtXi.getText().trim());
+        double xi1 = Double.parseDouble(this.txtXi1.getText().trim());
         double error = Double.parseDouble(this.txtError.getText().trim());
         
         ctrlSecante ctrl = new ctrlSecante(xi, xi1, error);

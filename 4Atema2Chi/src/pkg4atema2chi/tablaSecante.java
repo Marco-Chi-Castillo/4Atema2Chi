@@ -3,10 +3,9 @@ package pkg4atema2chi;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
-
 public class tablaSecante extends AbstractTableModel{
     public String[] columnas={
-        "i", "Xi-1", "Xi", "F(Xi-1)", "F(xi)" , "F(xi)(xi-1-xi)/F(xi-1)-F(xi)", "xi+1=xi-0", "Error"
+        "i", "Xi-1", "Xi", "F(Xi-1)", "F(xi)" , "Formula", "Raiz", "Error"
     };
     public Class [] tipos ={
         Integer.class, Double.class, Double.class, Double.class,Double.class, Double.class, Double.class,Double.class 
@@ -32,13 +31,13 @@ public class tablaSecante extends AbstractTableModel{
         filaSecante fila = this.filas.get(i);
         switch(i1){
             case 0: return fila.getI();
-            case 1: return fila.getXi();
-            case 2: return fila.getXi1();
+            case 1: return fila.getXi1();
+            case 2: return fila.getXi();
             case 3: return fila.getFxi1();
             case 4: return fila.getFxi();
             case 5: return fila.getFormula1();
             case 6: return fila.getFormula2();
-            case 7: return fila.getErro();
+            case 7: return fila.getError();
             
         }
         return null;
