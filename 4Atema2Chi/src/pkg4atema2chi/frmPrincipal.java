@@ -96,6 +96,7 @@ public class frmPrincipal extends javax.swing.JFrame {
        dlgAprox.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+<<<<<<< HEAD
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
 
 dlgNewton dlgNew = new dlgNewton(this, true);
@@ -104,6 +105,14 @@ dlgNewton dlgNew = new dlgNewton(this, true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
+=======
+    
+     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+       dlgSecante dlgSecan = new dlgSecante(this, true);
+       dlgSecan.setSize(600,400);
+       dlgSecan.setVisible(true);
+    }   
+>>>>>>> origin/tablaMetodoSecante
     /**
      * @param args the command line arguments
      */
