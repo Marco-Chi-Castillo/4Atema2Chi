@@ -5,7 +5,7 @@ import javax.swing.table.AbstractTableModel;
 
 
 public class tablaSecante extends AbstractTableModel{
-    ublic String[] columnas={
+    public String[] columnas={
         "i", "Xi-1", "Xi", "F(Xi-1)", "F(xi)" , "F(xi)(xi-1-xi)/F(xi-1)-F(xi)", "xi+1=xi-0", "Error"
     };
     public Class [] tipos ={
@@ -29,16 +29,18 @@ public class tablaSecante extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int i, int i1) {
-        filasecante fila = this.filas.get(i);
+        filaSecante fila = this.filas.get(i);
         switch(i1){
             case 0: return fila.getI();
             case 1: return fila.getXi1();
-            case 2: return fila.getFXi1();
-            case 3: return fila.getFxi();
+            case 2: return fila.getXi();
+            case 3: return fila.getFxi1();
             case 4: return fila.getFxi();
-            case 5: return fila.getFxi2();
-            case 6: return fila.getxi2();
-            case 7: return fila.getError();
+            case 5: return fila.getFormula1();
+            case 6: return fila.getFormula2();
+            case 7: return fila.getErro();
+                    
+            
             
         }
         return null;
